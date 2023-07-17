@@ -1,5 +1,4 @@
 #! /usr/bin/env node
-
 const fs =  require('fs')
 const {spawn} =  require('child_process')
 const file = process.argv[2]
@@ -25,7 +24,6 @@ function run(file){
 }
 
 run(`${file}.js`)
-
 
 fs.watch(`${pwd}`, (eventType, filename)=>{
     console.log(`Restarting`)
