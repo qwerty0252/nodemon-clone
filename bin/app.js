@@ -2,8 +2,7 @@
 
 const fs =  require('fs')
 const {spawn} =  require('child_process')
-const path = require('path')
-const args = process.argv
+const file = process.argv[2]
 const pwd = process.cwd()
 
 
@@ -25,10 +24,10 @@ function run(file){
     })
 }
 
-run(`${args[2]}.js`)
+run(`${file}.js`)
 
 
 fs.watch(`${pwd}`, (eventType, filename)=>{
     console.log(`Restarting`)
-    run(`${pwd}/${args[2]}.js`)
+    run(`${pwd}/${file}.js`)
 })
