@@ -4,6 +4,7 @@ const fs =  require('fs')
 const {spawn} =  require('child_process')
 const path = require('path')
 const args = process.argv
+const pwd = process.cwd()
 
 
 function run(file){
@@ -16,7 +17,7 @@ function run(file){
     })
 
     nodeInstance.stderr.on('data', (data)=>{
-        console.log(`Error: ${data}`)
+        console.error(`Error: ${data}`)
     })
 
     nodeInstance.on('close', (data)=>{
@@ -25,10 +26,9 @@ function run(file){
 }
 
 run(`${args[2]}.js`)
-console.log(args)
-console.log()
 
-fs.watch(`${process.cwd()}`, (eventType, filename)=>{
+
+fs.watch(`${pwd}`, (eventType, filename)=>{
     console.log(`Restarting`)
-    run(`${process.cwd()}/${args}.js`)
+    run(`${pwd}/${args[2]}.js`)
 })
