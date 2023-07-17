@@ -1,0 +1,14 @@
+{
+  "name": "dee",
+  "version": "1.0.0",
+  "description": "basically a nodemon clone",
+  "main": "bin/app.js",
+  "bin": {
+    "dee": "./bin/app.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Enyinnya",
+  "license": "ISC"
+}

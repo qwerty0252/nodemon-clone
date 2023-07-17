@@ -1,5 +1,10 @@
+#! /usr/bin/env node
+
 const fs =  require('fs')
 const {spawn} =  require('child_process')
+const path = require('path')
+const args = process.argv
+
 
 function run(file){
     const nodeExecutable = 'node'
@@ -7,7 +12,7 @@ function run(file){
     const nodeInstance = spawn(nodeExecutable, [targetFile])
 
     nodeInstance.stdout.on('data', (data)=>{
-        console.log(`Output: ${data}`)
+        console.log(`${data}`)
     })
 
     nodeInstance.stderr.on('data', (data)=>{
@@ -19,7 +24,11 @@ function run(file){
     })
 }
 
-fs.watch('./test_dir', (eventType, filename)=>{
-    console.log('changed')
-    run('./test_dir/test.js')
+run(`${args[2]}.js`)
+console.log(args)
+console.log()
+
+fs.watch(`${process.cwd()}`, (eventType, filename)=>{
+    console.log(`Restarting`)
+    run(`${process.cwd()}/${args}.js`)
 })
