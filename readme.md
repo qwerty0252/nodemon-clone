@@ -1,4 +1,4 @@
-#dee
+# dee
 This project is just me trying to replicate and publish an npm package. 
 This project is a basic implemention of nodemon. Hopefully I'll improve on it later.
 🙂✌🏾
