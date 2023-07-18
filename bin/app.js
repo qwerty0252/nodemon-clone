@@ -28,5 +28,5 @@ file.sp
 
 fs.watch(`${pwd}`, (eventType, filename)=>{
     console.log(`Restarting`)
-    run(`${pwd}/${file}.js`)
+    run(`${pwd}/${file.slice(file.length - 3)!='.js'?`${file}.js`:`${file}`}`)
 })
