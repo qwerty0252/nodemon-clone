@@ -23,7 +23,8 @@ function run(file){
     })
 }
 
-run(`${file}.js`)
+run(file.slice(file.length - 3)!='.js'?`${file}.js`:`${file}`)
+file.sp
 
 fs.watch(`${pwd}`, (eventType, filename)=>{
     console.log(`Restarting`)
