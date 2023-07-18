@@ -6,4 +6,4 @@
 In the root directory enter the command "npm install -g dee"
 
 ## Usage
-To use this package enter the command "dee <filename>"
+To use this package enter the command "dee <file>"
