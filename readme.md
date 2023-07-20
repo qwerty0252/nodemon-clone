@@ -7,7 +7,7 @@ This project is a basic implemention of nodemon. Hopefully I'll improve on it la
 ## Installation
 
 For now the package hasn't been published on npm.
-To install you can clone this repo, and enter the command in the root directory of this folder.
+To install you can clone this repo, and enter the command in the root directory of the folder.
 
 > npm install -g .
 
