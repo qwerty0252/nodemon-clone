@@ -4,7 +4,7 @@ const { spawn } = require("child_process");
 const file = process.argv[2];
 const pwd = process.cwd();
 let pid;
-console.log(process.argv);
+
 function run(file) {
   const nodeExecutable = "node";
   const targetFile = file;
@@ -26,9 +26,6 @@ function run(file) {
 run(file.slice(file.length - 3) != ".js" ? `${file}.js` : `${file}`);
 file.sp;
 
-// process.on("SIGTERM", () => {
-//   console.log("dd");
-// });
 
 fs.watch(`${pwd}`, (eventType, filename) => {
   process.kill(pid, "SIGTERM");
