@@ -11,7 +11,7 @@ To install you can clone this repo, and enter the command in the root directory 
 
 > npm install -g .
 
-When the package enter this command
+When the package is published on npm enter this command
 
 > npm install -g dee
 
