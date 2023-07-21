@@ -26,10 +26,6 @@ function run(file) {
 run(file.slice(file.length - 3) != ".js" ? `${file}.js` : `${file}`);
 file.sp;
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 25250a9880cfdb533a5769751b497ecf09a1315e
 fs.watch(`${pwd}`, (eventType, filename) => {
   process.kill(pid, "SIGTERM");
   console.log(`Restarting`);
